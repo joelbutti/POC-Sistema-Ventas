@@ -59,34 +59,38 @@ namespace POC_Sistema_Ventas
             this.BtnProductos = new System.Windows.Forms.Button();
             this.TcPrinc = new System.Windows.Forms.TabControl();
             this.TpProductos = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnAgregarProducto = new System.Windows.Forms.Button();
+            this.BtnEliminarProducto = new System.Windows.Forms.Button();
+            this.BtnEditarProducto = new System.Windows.Forms.Button();
             this.TpClientes = new System.Windows.Forms.TabPage();
-            this.TpVentas = new System.Windows.Forms.TabPage();
-            this.TpCaja = new System.Windows.Forms.TabPage();
-            this.TpUsuarios = new System.Windows.Forms.TabPage();
-            this.TpCompras = new System.Windows.Forms.TabPage();
-            this.TpBalance = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.TpVentas = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
+            this.TpCaja = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
+            this.TpUsuarios = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
+            this.TpCompras = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
+            this.TpBalance = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TcPrinc.SuspendLayout();
             this.TpProductos.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.TpClientes.SuspendLayout();
             this.TpVentas.SuspendLayout();
             this.TpCaja.SuspendLayout();
             this.TpUsuarios.SuspendLayout();
             this.TpCompras.SuspendLayout();
             this.TpBalance.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -124,25 +128,25 @@ namespace POC_Sistema_Ventas
             // imprimirToolStripMenuItem
             // 
             this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.imprimirToolStripMenuItem.Text = "Imprimir";
             // 
             // exportarToolStripMenuItem
             // 
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.exportarToolStripMenuItem.Text = "Exportar";
             // 
             // desconectarToolStripMenuItem
             // 
             this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.desconectarToolStripMenuItem.Text = "Desconectar";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // mostrarToolStripMenuItem
@@ -351,6 +355,7 @@ namespace POC_Sistema_Ventas
             // 
             // TpProductos
             // 
+            this.TpProductos.Controls.Add(this.dataGridView1);
             this.TpProductos.Controls.Add(this.panel3);
             this.TpProductos.Location = new System.Drawing.Point(4, 4);
             this.TpProductos.Name = "TpProductos";
@@ -360,85 +365,69 @@ namespace POC_Sistema_Ventas
             this.TpProductos.Text = "Productos";
             this.TpProductos.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel3.Controls.Add(this.BtnBuscar);
+            this.panel3.Controls.Add(this.TxtBuscar);
+            this.panel3.Controls.Add(this.BtnAgregarProducto);
+            this.panel3.Controls.Add(this.BtnEditarProducto);
+            this.panel3.Controls.Add(this.BtnEliminarProducto);
+            this.panel3.Location = new System.Drawing.Point(3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(654, 68);
+            this.panel3.TabIndex = 3;
+            // 
+            // BtnAgregarProducto
+            // 
+            this.BtnAgregarProducto.BackColor = System.Drawing.Color.Gainsboro;
+            this.BtnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregarProducto.Image")));
+            this.BtnAgregarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregarProducto.Location = new System.Drawing.Point(18, 4);
+            this.BtnAgregarProducto.Name = "BtnAgregarProducto";
+            this.BtnAgregarProducto.Size = new System.Drawing.Size(120, 56);
+            this.BtnAgregarProducto.TabIndex = 0;
+            this.BtnAgregarProducto.Text = "Agregar";
+            this.BtnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAgregarProducto.UseVisualStyleBackColor = false;
+            // 
+            // BtnEliminarProducto
+            // 
+            this.BtnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminarProducto.Image")));
+            this.BtnEliminarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminarProducto.Location = new System.Drawing.Point(295, 4);
+            this.BtnEliminarProducto.Name = "BtnEliminarProducto";
+            this.BtnEliminarProducto.Size = new System.Drawing.Size(120, 56);
+            this.BtnEliminarProducto.TabIndex = 2;
+            this.BtnEliminarProducto.Text = "Eliminar";
+            this.BtnEliminarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEliminarProducto.UseVisualStyleBackColor = true;
+            // 
+            // BtnEditarProducto
+            // 
+            this.BtnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditarProducto.Image")));
+            this.BtnEditarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditarProducto.Location = new System.Drawing.Point(157, 4);
+            this.BtnEditarProducto.Name = "BtnEditarProducto";
+            this.BtnEditarProducto.Size = new System.Drawing.Size(120, 56);
+            this.BtnEditarProducto.TabIndex = 1;
+            this.BtnEditarProducto.Text = "Editar";
+            this.BtnEditarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEditarProducto.UseVisualStyleBackColor = true;
+            // 
             // TpClientes
             // 
             this.TpClientes.Controls.Add(this.button2);
             this.TpClientes.Location = new System.Drawing.Point(4, 4);
             this.TpClientes.Name = "TpClientes";
             this.TpClientes.Padding = new System.Windows.Forms.Padding(3);
-            this.TpClientes.Size = new System.Drawing.Size(653, 436);
+            this.TpClientes.Size = new System.Drawing.Size(653, 412);
             this.TpClientes.TabIndex = 1;
             this.TpClientes.Text = "Clientes";
             this.TpClientes.UseVisualStyleBackColor = true;
-            // 
-            // TpVentas
-            // 
-            this.TpVentas.Controls.Add(this.button3);
-            this.TpVentas.Location = new System.Drawing.Point(4, 4);
-            this.TpVentas.Name = "TpVentas";
-            this.TpVentas.Padding = new System.Windows.Forms.Padding(3);
-            this.TpVentas.Size = new System.Drawing.Size(653, 436);
-            this.TpVentas.TabIndex = 2;
-            this.TpVentas.Text = "Ventas";
-            this.TpVentas.UseVisualStyleBackColor = true;
-            // 
-            // TpCaja
-            // 
-            this.TpCaja.Controls.Add(this.button4);
-            this.TpCaja.Location = new System.Drawing.Point(4, 4);
-            this.TpCaja.Name = "TpCaja";
-            this.TpCaja.Padding = new System.Windows.Forms.Padding(3);
-            this.TpCaja.Size = new System.Drawing.Size(653, 436);
-            this.TpCaja.TabIndex = 3;
-            this.TpCaja.Text = "Caja";
-            this.TpCaja.UseVisualStyleBackColor = true;
-            // 
-            // TpUsuarios
-            // 
-            this.TpUsuarios.Controls.Add(this.button5);
-            this.TpUsuarios.Location = new System.Drawing.Point(4, 4);
-            this.TpUsuarios.Name = "TpUsuarios";
-            this.TpUsuarios.Padding = new System.Windows.Forms.Padding(3);
-            this.TpUsuarios.Size = new System.Drawing.Size(653, 436);
-            this.TpUsuarios.TabIndex = 4;
-            this.TpUsuarios.Text = "Usuarios";
-            this.TpUsuarios.UseVisualStyleBackColor = true;
-            // 
-            // TpCompras
-            // 
-            this.TpCompras.Controls.Add(this.button6);
-            this.TpCompras.Location = new System.Drawing.Point(4, 4);
-            this.TpCompras.Name = "TpCompras";
-            this.TpCompras.Padding = new System.Windows.Forms.Padding(3);
-            this.TpCompras.Size = new System.Drawing.Size(653, 436);
-            this.TpCompras.TabIndex = 5;
-            this.TpCompras.Text = "Compras";
-            this.TpCompras.UseVisualStyleBackColor = true;
-            // 
-            // TpBalance
-            // 
-            this.TpBalance.Controls.Add(this.button7);
-            this.TpBalance.Location = new System.Drawing.Point(4, 4);
-            this.TpBalance.Name = "TpBalance";
-            this.TpBalance.Padding = new System.Windows.Forms.Padding(3);
-            this.TpBalance.Size = new System.Drawing.Size(653, 436);
-            this.TpBalance.TabIndex = 6;
-            this.TpBalance.Text = "Balance";
-            this.TpBalance.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 56);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Agregar Producto";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -449,6 +438,17 @@ namespace POC_Sistema_Ventas
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // TpVentas
+            // 
+            this.TpVentas.Controls.Add(this.button3);
+            this.TpVentas.Location = new System.Drawing.Point(4, 4);
+            this.TpVentas.Name = "TpVentas";
+            this.TpVentas.Padding = new System.Windows.Forms.Padding(3);
+            this.TpVentas.Size = new System.Drawing.Size(653, 412);
+            this.TpVentas.TabIndex = 2;
+            this.TpVentas.Text = "Ventas";
+            this.TpVentas.UseVisualStyleBackColor = true;
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(289, 207);
@@ -457,6 +457,17 @@ namespace POC_Sistema_Ventas
             this.button3.TabIndex = 1;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // TpCaja
+            // 
+            this.TpCaja.Controls.Add(this.button4);
+            this.TpCaja.Location = new System.Drawing.Point(4, 4);
+            this.TpCaja.Name = "TpCaja";
+            this.TpCaja.Padding = new System.Windows.Forms.Padding(3);
+            this.TpCaja.Size = new System.Drawing.Size(653, 412);
+            this.TpCaja.TabIndex = 3;
+            this.TpCaja.Text = "Caja";
+            this.TpCaja.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -467,6 +478,17 @@ namespace POC_Sistema_Ventas
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // TpUsuarios
+            // 
+            this.TpUsuarios.Controls.Add(this.button5);
+            this.TpUsuarios.Location = new System.Drawing.Point(4, 4);
+            this.TpUsuarios.Name = "TpUsuarios";
+            this.TpUsuarios.Padding = new System.Windows.Forms.Padding(3);
+            this.TpUsuarios.Size = new System.Drawing.Size(653, 412);
+            this.TpUsuarios.TabIndex = 4;
+            this.TpUsuarios.Text = "Usuarios";
+            this.TpUsuarios.UseVisualStyleBackColor = true;
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(289, 207);
@@ -476,6 +498,17 @@ namespace POC_Sistema_Ventas
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // TpCompras
+            // 
+            this.TpCompras.Controls.Add(this.button6);
+            this.TpCompras.Location = new System.Drawing.Point(4, 4);
+            this.TpCompras.Name = "TpCompras";
+            this.TpCompras.Padding = new System.Windows.Forms.Padding(3);
+            this.TpCompras.Size = new System.Drawing.Size(653, 412);
+            this.TpCompras.TabIndex = 5;
+            this.TpCompras.Text = "Compras";
+            this.TpCompras.UseVisualStyleBackColor = true;
+            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(289, 207);
@@ -484,6 +517,17 @@ namespace POC_Sistema_Ventas
             this.button6.TabIndex = 1;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // TpBalance
+            // 
+            this.TpBalance.Controls.Add(this.button7);
+            this.TpBalance.Location = new System.Drawing.Point(4, 4);
+            this.TpBalance.Name = "TpBalance";
+            this.TpBalance.Padding = new System.Windows.Forms.Padding(3);
+            this.TpBalance.Size = new System.Drawing.Size(653, 412);
+            this.TpBalance.TabIndex = 6;
+            this.TpBalance.Text = "Balance";
+            this.TpBalance.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -502,34 +546,33 @@ namespace POC_Sistema_Ventas
             this.panel2.Size = new System.Drawing.Size(661, 24);
             this.panel2.TabIndex = 1;
             // 
-            // button8
+            // TxtBuscar
             // 
-            this.button8.Location = new System.Drawing.Point(224, 4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(174, 56);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.TxtBuscar.Location = new System.Drawing.Point(457, 36);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(121, 20);
+            this.TxtBuscar.TabIndex = 3;
+            this.TxtBuscar.Text = "Buscar. . .";
             // 
-            // button9
+            // BtnBuscar
             // 
-            this.button9.Location = new System.Drawing.Point(448, 4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(174, 56);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.BtnBuscar.AutoSize = true;
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(597, 30);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.BtnBuscar.TabIndex = 4;
+            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // dataGridView1
             // 
-            this.panel3.BackColor = System.Drawing.Color.YellowGreen;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Location = new System.Drawing.Point(3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(654, 68);
-            this.panel3.TabIndex = 3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 77);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(644, 327);
+            this.dataGridView1.TabIndex = 4;
             // 
             // FrmInicio
             // 
@@ -549,13 +592,15 @@ namespace POC_Sistema_Ventas
             this.panel1.ResumeLayout(false);
             this.TcPrinc.ResumeLayout(false);
             this.TpProductos.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.TpClientes.ResumeLayout(false);
             this.TpVentas.ResumeLayout(false);
             this.TpCaja.ResumeLayout(false);
             this.TpUsuarios.ResumeLayout(false);
             this.TpCompras.ResumeLayout(false);
             this.TpBalance.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,7 +636,7 @@ namespace POC_Sistema_Ventas
         private System.Windows.Forms.Button BtnProductos;
         private System.Windows.Forms.TabControl TcPrinc;
         private System.Windows.Forms.TabPage TpProductos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAgregarProducto;
         private System.Windows.Forms.TabPage TpClientes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage TpVentas;
@@ -606,8 +651,11 @@ namespace POC_Sistema_Ventas
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button BtnEliminarProducto;
+        private System.Windows.Forms.Button BtnEditarProducto;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox TxtBuscar;
     }
 }
 
