@@ -59,10 +59,13 @@ namespace POC_Sistema_Ventas
             this.BtnProductos = new System.Windows.Forms.Button();
             this.TcPrinc = new System.Windows.Forms.TabControl();
             this.TpProductos = new System.Windows.Forms.TabPage();
+            this.DgvProductos = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.BtnAgregarProducto = new System.Windows.Forms.Button();
-            this.BtnEliminarProducto = new System.Windows.Forms.Button();
             this.BtnEditarProducto = new System.Windows.Forms.Button();
+            this.BtnEliminarProducto = new System.Windows.Forms.Button();
             this.TpClientes = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.TpVentas = new System.Windows.Forms.TabPage();
@@ -76,13 +79,11 @@ namespace POC_Sistema_Ventas
             this.TpBalance = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TcPrinc.SuspendLayout();
             this.TpProductos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             this.panel3.SuspendLayout();
             this.TpClientes.SuspendLayout();
             this.TpVentas.SuspendLayout();
@@ -90,7 +91,6 @@ namespace POC_Sistema_Ventas
             this.TpUsuarios.SuspendLayout();
             this.TpCompras.SuspendLayout();
             this.TpBalance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -355,7 +355,7 @@ namespace POC_Sistema_Ventas
             // 
             // TpProductos
             // 
-            this.TpProductos.Controls.Add(this.dataGridView1);
+            this.TpProductos.Controls.Add(this.DgvProductos);
             this.TpProductos.Controls.Add(this.panel3);
             this.TpProductos.Location = new System.Drawing.Point(4, 4);
             this.TpProductos.Name = "TpProductos";
@@ -364,6 +364,17 @@ namespace POC_Sistema_Ventas
             this.TpProductos.TabIndex = 0;
             this.TpProductos.Text = "Productos";
             this.TpProductos.UseVisualStyleBackColor = true;
+            // 
+            // DgvProductos
+            // 
+            this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProductos.Location = new System.Drawing.Point(3, 77);
+            this.DgvProductos.MultiSelect = false;
+            this.DgvProductos.Name = "DgvProductos";
+            this.DgvProductos.ReadOnly = true;
+            this.DgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvProductos.Size = new System.Drawing.Size(644, 327);
+            this.DgvProductos.TabIndex = 4;
             // 
             // panel3
             // 
@@ -378,6 +389,26 @@ namespace POC_Sistema_Ventas
             this.panel3.Size = new System.Drawing.Size(654, 68);
             this.panel3.TabIndex = 3;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.AutoSize = true;
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(597, 30);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(30, 30);
+            this.BtnBuscar.TabIndex = 4;
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(457, 36);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(121, 20);
+            this.TxtBuscar.TabIndex = 3;
+            this.TxtBuscar.Text = "Buscar. . .";
+            // 
             // BtnAgregarProducto
             // 
             this.BtnAgregarProducto.BackColor = System.Drawing.Color.Gainsboro;
@@ -391,19 +422,7 @@ namespace POC_Sistema_Ventas
             this.BtnAgregarProducto.Text = "Agregar";
             this.BtnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAgregarProducto.UseVisualStyleBackColor = false;
-            // 
-            // BtnEliminarProducto
-            // 
-            this.BtnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminarProducto.Image")));
-            this.BtnEliminarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarProducto.Location = new System.Drawing.Point(295, 4);
-            this.BtnEliminarProducto.Name = "BtnEliminarProducto";
-            this.BtnEliminarProducto.Size = new System.Drawing.Size(120, 56);
-            this.BtnEliminarProducto.TabIndex = 2;
-            this.BtnEliminarProducto.Text = "Eliminar";
-            this.BtnEliminarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminarProducto.UseVisualStyleBackColor = true;
+            this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
             // BtnEditarProducto
             // 
@@ -417,6 +436,21 @@ namespace POC_Sistema_Ventas
             this.BtnEditarProducto.Text = "Editar";
             this.BtnEditarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditarProducto.UseVisualStyleBackColor = true;
+            this.BtnEditarProducto.Click += new System.EventHandler(this.BtnEditarProducto_Click);
+            // 
+            // BtnEliminarProducto
+            // 
+            this.BtnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminarProducto.Image")));
+            this.BtnEliminarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminarProducto.Location = new System.Drawing.Point(295, 4);
+            this.BtnEliminarProducto.Name = "BtnEliminarProducto";
+            this.BtnEliminarProducto.Size = new System.Drawing.Size(120, 56);
+            this.BtnEliminarProducto.TabIndex = 2;
+            this.BtnEliminarProducto.Text = "Eliminar";
+            this.BtnEliminarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEliminarProducto.UseVisualStyleBackColor = true;
+            this.BtnEliminarProducto.Click += new System.EventHandler(this.BtnEliminarProducto_Click);
             // 
             // TpClientes
             // 
@@ -546,34 +580,6 @@ namespace POC_Sistema_Ventas
             this.panel2.Size = new System.Drawing.Size(661, 24);
             this.panel2.TabIndex = 1;
             // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Location = new System.Drawing.Point(457, 36);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(121, 20);
-            this.TxtBuscar.TabIndex = 3;
-            this.TxtBuscar.Text = "Buscar. . .";
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.AutoSize = true;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.Location = new System.Drawing.Point(597, 30);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(30, 30);
-            this.BtnBuscar.TabIndex = 4;
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 327);
-            this.dataGridView1.TabIndex = 4;
-            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,11 +593,13 @@ namespace POC_Sistema_Ventas
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmInicio";
             this.Text = "Sistema Ventas";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.TcPrinc.ResumeLayout(false);
             this.TpProductos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.TpClientes.ResumeLayout(false);
@@ -600,7 +608,6 @@ namespace POC_Sistema_Ventas
             this.TpUsuarios.ResumeLayout(false);
             this.TpCompras.ResumeLayout(false);
             this.TpBalance.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,7 +660,7 @@ namespace POC_Sistema_Ventas
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button BtnEliminarProducto;
         private System.Windows.Forms.Button BtnEditarProducto;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvProductos;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.TextBox TxtBuscar;
     }

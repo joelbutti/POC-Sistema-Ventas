@@ -60,6 +60,18 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Productos\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Productos\EditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productos\EditarProducto.Designer.cs">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202105011804119_CategoriaYProducto.cs" />
     <Compile Include="Migrations\202105011804119_CategoriaYProducto.Designer.cs">
       <DependentUpon>202105011804119_CategoriaYProducto.cs</DependentUpon>
@@ -68,10 +80,17 @@
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\SistemaVentasContext.cs" />
+    <Compile Include="SisVentasRepositorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productos\EditarProducto.resx">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105011804119_CategoriaYProducto.resx">
       <DependentUpon>202105011804119_CategoriaYProducto.cs</DependentUpon>
